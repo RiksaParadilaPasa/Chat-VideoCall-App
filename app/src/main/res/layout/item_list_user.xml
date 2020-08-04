@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_profile_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/user_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/user_profile_image"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_status_online"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:civ_border_width="10dp"
+        app:civ_border_color="#05df29"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_below="@id/user_username"
+        android:layout_toRightOf="@id/user_profile_image"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/user_status_offline"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:civ_border_width="10dp"
+        app:civ_border_color="#bfbfbf"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="-15dp"
+        android:layout_below="@id/user_username"
+        android:layout_toRightOf="@id/user_profile_image"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="visible"/>
+
+    <TextView
+        android:id="@+id/user_txt_last_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_below="@id/user_username"
+        android:layout_toRightOf="@id/user_profile_image"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="5dp"
+        android:maxLines="1"/>
+
+    <Button
+        android:id="@+id/user_btn_chat"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_chat" />
+
+    <Button
+        android:id="@+id/user_btn_call"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/user_btn_chat"
+        android:background="@drawable/ic_call"/>
+
+
+</RelativeLayout>
